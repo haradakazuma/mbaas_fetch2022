@@ -30,6 +30,7 @@
                 .catch(function(err) {
                     $("#message").html("Failed to create new object, with error code: " + JSON.stringify(err));
                 })
+        }
 
             function fetch() {
                 var TestClass = ncmb.DataStore("FetchTest");
@@ -49,12 +50,11 @@
                         for (var i = 0; i < results.length; i++) {
                             var data = results[i].get("text");
                             var update = results[i].get("updateDate");
-                            msg += data + ":" + update;
+                            msg += data + ":" + update; + "<br>"
                         }
                         $("#message").html(msg);
                     })
             }
-        }
     </script>
 </head>
 
